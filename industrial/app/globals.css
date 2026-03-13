@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #ffffff;
+  --color-bg-muted: #f2f1ec;
+  --color-fg: #0d0d0d;
+  --color-fg-muted: #6b6b6b;
+  --color-border-col: #e0dfd8;
+  --color-red: #e8091d;
+  --font-sans: var(--font-geist), "Inter", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-sans);
+  background: #fff;
+  color: #0d0d0d;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #f2f1ec; }
+::-webkit-scrollbar-thumb { background: #c5c2ba; border-radius: 3px; }
+
+.gradient-blob {
+  background:
+    radial-gradient(ellipse at 25% 20%, #7bb8f0 0%, transparent 50%),
+    radial-gradient(ellipse at 75% 55%, #c0a0f0 0%, transparent 50%),
+    radial-gradient(ellipse at 15% 80%, #f0c060 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 25%, #f07885 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, #80d0b0 0%, transparent 60%);
+}
+
+.img-dark {
+  background: linear-gradient(135deg, #232323 0%, #181818 60%, #232323 100%);
+}
+
+.img-dark-inner {
+  background-image: radial-gradient(circle at 40% 40%, rgba(255,255,255,0.07) 0%, transparent 60%);
+}
+
+.grid-bg {
+  background-image:
+    linear-gradient(#e0dfd8 1px, transparent 1px),
+    linear-gradient(90deg, #e0dfd8 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up { animation: fadeUp .65s ease both; }
+
+/* stripe accent line */
+.stripe-line {
+  background: linear-gradient(90deg, #e8091d, #ff8c00, #ffd700);
+}
